@@ -26,7 +26,7 @@ jobs:
         uses: skywarth/vite-github-pages-deployer@v1.5.0
         with:
           public_base_path: /elsa606.github.io/ # Replace with your repository name
-          build_path: ./dist
+          build_path: ./dist #123
           install_phase_node_env: dev
           build_phase_node_env: production
           package_manager: npm
