@@ -67,12 +67,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Morandi color palette
+				// Restored to the softer Morandi blue color palette
 				morandi: {
 					blue: {
-						light: '#A5B5C5',
-						DEFAULT: '#8799AD',
-						dark: '#33465C',
+						light: '#A5B5C5', // Restored to softer blue
+						DEFAULT: '#8799AD', // Restored to softer blue
+						dark: '#33465C', // Kept the same
 					},
 					neutral: {
 						lightest: '#F8F7F4',
@@ -135,3 +135,4 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+</lov-codee>
