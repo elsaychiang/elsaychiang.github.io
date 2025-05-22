@@ -86,6 +86,14 @@
 }
 
 @layer base {
+  :root {
+    /* your light theme variables here */
+  }
+
+  .dark {
+    /* your dark theme variables here */
+  }
+
   * {
     @apply border-border;
   }
