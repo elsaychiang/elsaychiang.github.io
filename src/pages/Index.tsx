@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { 
@@ -78,11 +77,10 @@ const Index = () => {
           
           <div className="md:w-2/5" data-animate>
             <div className="w-48 h-48 md:w-72 md:h-72 mx-auto rounded-full border-4 border-morandi-neutral-light overflow-hidden shadow-lg">
-              <img
-                src="/Portfoliio_headshot.JPG"  // <-- put your image path here
-                alt="Your Name"
-                className="w-full h-full object-cover"
-              />
+              {/* Placeholder for profile image - replace with actual image */}
+              <div className="w-full h-full bg-morandi-neutral grid place-items-center">
+                <span className="text-6xl font-montserrat text-white">EC</span>
+              </div>
             </div>
           </div>
         </div>
@@ -238,11 +236,17 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProjectCard
             title="Crossroads Classic Analytics Challenge"
-            description="NCAA prediction using Tableau & XGBoost"
+            caption="NCAA prediction using Tableau & XGBoost"
+            description={[
+              "Predicted NCAA March Madness semifinalists and champion based on user-submitted brackets; analyzed the impact of school affiliation on bracket decisions.",
+              "Built an interactive Tableau dashboard to visualize exploratory data and extract key insights for feature engineering.",
+              "Achieved 5th place out of 87 teams in a Kaggle competition by developing an XGBoost ensemble model, reaching a weighted accuracy of 0.63085."
+            ]}
             tools={["Tableau", "XGBoost", "Python"]}
             outcome="Placed 5th out of 87 teams in the competition"
             data-animate
           />
+          
           
           <ProjectCard
             title="Bankruptcy Prediction (Kaggle)"
