@@ -79,7 +79,7 @@ const Index = () => {
           <div className="md:w-2/5" data-animate>
             <div className="w-48 h-48 md:w-72 md:h-72 mx-auto rounded-full border-4 border-morandi-neutral-light overflow-hidden shadow-lg">
               <img
-                src="/LinkedIn_final.JPG"  // <-- put your image path here
+                src="/Portfoliio_headshot.JPG"  // <-- put your image path here
                 alt="Your Name"
                 className="w-full h-full object-cover"
               />
