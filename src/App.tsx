@@ -1,27 +1,48 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import "./App.css"
 
-const queryClient = new QueryClient();
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>My Portfolio</h1>
+        <p>Welcome to my personal website!</p>
+      </header>
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+      <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate software developer with experience in building web applications.</p>
+      </section>
 
-export default App;
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>Project 1</li>
+          <li>Project 2</li>
+          <li>Project 3</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: example@example.com</p>
+        <p>
+          <a href="https://www.linkedin.com/in/yi-shiuan-elsa-chiang/" target="_blank" rel="noopener noreferrer">
+            LinkedIn Profile
+          </a>
+        </p>
+        <p>
+          GitHub:{" "}
+          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+            Your GitHub
+          </a>
+        </p>
+      </section>
+
+      <footer>
+        <p>&copy; 2023 My Portfolio</p>
+      </footer>
+    </div>
+  )
+}
+
+export default App
