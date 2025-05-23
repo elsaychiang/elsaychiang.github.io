@@ -77,10 +77,11 @@ const Index = () => {
           
           <div className="md:w-2/5" data-animate>
             <div className="w-48 h-48 md:w-72 md:h-72 mx-auto rounded-full border-4 border-morandi-neutral-light overflow-hidden shadow-lg">
-              {/* Placeholder for profile image - replace with actual image */}
-              <div className="w-full h-full bg-morandi-neutral grid place-items-center">
-                <span className="text-6xl font-montserrat text-white">EC</span>
-              </div>
+              <img
+                src="/Portfoliio_headshot.JPG"  // <-- put your image path here
+                alt="Your Name"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
