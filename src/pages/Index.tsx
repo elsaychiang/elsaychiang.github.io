@@ -236,14 +236,16 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProjectCard
             title="Crossroads Classic Analytics Challenge"
-            caption="NCAA prediction using Tableau & XGBoost"
+            caption="Sports Data Prediction | User Behavior Analysis | Machine Learning Application"
             description={[
-              "Predicted NCAA March Madness semifinalists and champion based on user-submitted brackets; analyzed the impact of school affiliation on bracket decisions.",
-              "Built an interactive Tableau dashboard to visualize exploratory data and extract key insights for feature engineering.",
-              "Achieved 5th place out of 87 teams in a Kaggle competition by developing an XGBoost ensemble model, reaching a weighted accuracy of 0.63085."
+              "🏀 Predicting NCAA March Madness outcomes while uncovering the impact of school affiliation on users’ bracket decisions.",
+              "Predicted semifinalists and champions using XGBoost ensemble models."
+              "Analyzed school affiliation effects on user-submitted brackets",
+              "Built interactive Tableau dashboards to visualize exploratory data and extract key insights for feature engineering.",
+              "Ranked Top 5 out of 87 teams on Kaggle with a weighted accuracy of 0.63085."
             ]}
             tools={["Tableau", "XGBoost", "Python"]}
-            outcome="Placed 5th out of 87 teams in the competition"
+            outcome="🏅 5th place (of 87) in the Kaggle competition"
             data-animate
           />
           
