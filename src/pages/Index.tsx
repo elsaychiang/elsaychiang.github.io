@@ -237,10 +237,10 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProjectCard
             title="Crossroads Classic Analytics Challenge"
-            caption="Sports Data Prediction | User Behavior Analysis | Machine Learning Application"
+            caption="Sports Data Prediction | User Behavior Analysis"
             description={[
-              "Predicted NCAA March Madness semifinalists and champions using XGBoost ensemble models while uncovering the influence of school affiliation bias on user-submitted brackets.",
-              "Analyzed school affiliation effects on user-submitted brackets.",
+              "Predicted NCAA March Madness semifinalists and champions using XGBoost ensemble models.",
+              "Analyzed the influence of school affiliation bias on 50,000+ user-submitted brackets.",
               "Built interactive Tableau dashboards to visualize exploratory data and extract key insights for feature engineering.",
               "Ranked Top 5 out of 87 teams on Kaggle with a weighted accuracy of 0.63085."
             ]}
@@ -251,10 +251,16 @@ const Index = () => {
           
           
           <ProjectCard
-            title="Bankruptcy Prediction (Kaggle)"
-            description="Built a predictive model for bankruptcy risk assessment"
-            tools={["SAS EM", "Statistical Analysis", "Machine Learning"]}
-            outcome="Ranked 18th in the competition with 87% accuracy"
+            title="Bankruptcy Prediction"
+            caption="Financial Risk Modeling | Predictive Analytics | Model Optimization"
+            description={[
+              "Developed a bankruptcy prediction model using financial indicators and machine learning, improving accuracy and generalizability through full dataset retraining.",
+              "Built and evaluated models in SAS Enterprise Miner to address a severe class imbalance, with only 2% of cases representing bankruptcy.",
+              "Created a robust ensemble model integrating Logistic Regression, Gradient Boosting, and Neural Networks to leverage complementary algorithm strengths.",
+              "Retrained the final model on the full dataset, increasing prediction accuracy from 91.5% to ~92%."
+            ]}
+            tools={["SAS EM", "Gradient Boosting", "Neural Network", "Logistics Regression"]}
+            outcome="🏅 Ranked 18th in the Kaggle competition with 94.2% AUC"
             data-animate
           />
           
