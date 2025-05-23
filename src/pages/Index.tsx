@@ -238,9 +238,8 @@ const Index = () => {
             title="Crossroads Classic Analytics Challenge"
             caption="Sports Data Prediction | User Behavior Analysis | Machine Learning Application"
             description={[
-              "🏀 Predicting NCAA March Madness outcomes while uncovering the impact of school affiliation on users’ bracket decisions.",
-              "Predicted semifinalists and champions using XGBoost ensemble models.",
-              "Analyzed school affiliation effects on user-submitted brackets",
+              "Predicted NCAA March Madness semifinalists and champions using XGBoost ensemble models while uncovering the influence of school affiliation bias on user-submitted brackets.",
+              "Analyzed school affiliation effects on user-submitted brackets.",
               "Built interactive Tableau dashboards to visualize exploratory data and extract key insights for feature engineering.",
               "Ranked Top 5 out of 87 teams on Kaggle with a weighted accuracy of 0.63085."
             ]}
