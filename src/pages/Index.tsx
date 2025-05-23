@@ -266,9 +266,17 @@ const Index = () => {
           
           <ProjectCard
             title="Airbnb Pricing Optimization"
-            description="Developed and deployed pricing prediction model"
-            tools={["XGBoost", "Python", "SQL", "Data Visualization"]}
-            outcome="Improved pricing strategy with 92% accuracy rate"
+            caption="Real Estate Analytics | Price Prediction | Revenue Strategy"
+            description={[
+              "Developed a machine learning model to optimize Airbnb listing prices and enhance host revenue strategies through data-driven insights.",
+              "Conducted exploratory data analysis and visualization to guide feature selection based on listing attributes, location, and seasonal patterns.",
+              "Clustered listings by nightly rate into three segments to tailor pricing strategies and analyze key drivers of occupancy within each group.",
+              "Trained an XGBoost regression model to predict optimal nightly pricing.",
+              "Achieved over 95% prediction accuracy (R-squared), significantly improving pricing precision and competitiveness.",
+              "Delivered a functional, interpretable model to support smarter pricing decisions and maximize listing performance."
+            ]}
+            tools={["XGBoost", "Python", "Data Visualization"]}
+            outcome="Delivered a high-accuracy pricing tool to optimize Airbnb revenue"
             data-animate
           />
         </div>
