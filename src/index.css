@@ -1,3 +1,5 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -44,7 +46,7 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark body {
+  .dark {
     --background: 210 29% 15%;
     --foreground: 210 40% 98%;
 
@@ -82,7 +84,9 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+}
 
+@layer base {
   * {
     @apply border-border;
   }
@@ -108,23 +112,23 @@
   .section-title {
     @apply text-3xl md:text-4xl font-semibold text-morandi-blue-dark mb-8 font-montserrat;
   }
-
+  
   .section-subtitle {
     @apply text-xl font-medium text-morandi-blue mb-4 font-montserrat;
   }
-
+  
   .container-custom {
     @apply container mx-auto px-4 lg:px-8 max-w-6xl;
   }
-
+  
   .timeline-dot {
     @apply absolute w-4 h-4 bg-morandi-blue rounded-full left-[-8px] top-1;
   }
-
+  
   .timeline-line {
     @apply absolute h-full w-0.5 bg-morandi-neutral-dark left-[-1px] top-6;
   }
-
+  
   .card-hover {
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
