@@ -313,7 +313,7 @@ const Index = () => {
                 <Linkedin className="h-5 w-5 text-morandi-blue mr-3 mt-0.5" />
                 <div>
                   <p className="font-medium">LinkedIn</p>
-                  <a href="#" className="text-gray-600 hover:text-morandi-blue">
+                  <a href="https://www.linkedin.com/in/yi-shiuan-elsa-chiang/" className="text-gray-600 hover:text-morandi-blue">
                     LinkedIn Profile
                   </a>
                 </div>
