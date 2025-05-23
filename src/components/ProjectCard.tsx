@@ -19,6 +19,11 @@ const ProjectCard = ({ title, caption, description, tools, outcome, className }:
   // Convert description to array if it's a string
   const descriptionArray = typeof description === "string" ? [description] : description
 
+  // Extract the first item as summary (will be displayed in bold)
+  const summary = descriptionArray.length > 0 ? descriptionArray[0] : ""
+  // Rest of the description points (excluding the first one)
+  const restOfDescription = descriptionArray.slice(1)
+
   // Handle mouse enter/leave events
   const handleMouseEnter = () => {
     setIsExpanded(true)
@@ -39,66 +44,52 @@ const ProjectCard = ({ title, caption, description, tools, outcome, className }:
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      {/* Title always visible */}
       <h3 className="text-xl font-semibold text-morandi-blue-dark mb-2 font-montserrat">{title}</h3>
 
-      {/* Display caption if provided */}
-      {caption && <p className="text-morandi-blue font-medium mb-2">{caption}</p>}
+      {/* Caption always visible if provided */}
+      {caption && <p className="text-morandi-blue font-medium mb-3">{caption}</p>}
 
-      {/* Description with animation */}
-      <div
-        className={cn(
-          "overflow-hidden transition-all duration-300",
-          isExpanded ? "max-h-[1000px] opacity-100" : "max-h-[150px] opacity-90",
-        )}
-      >
-        <ul className="list-disc pl-5 text-gray-600 mb-4 space-y-1">
-          {isExpanded
-            ? descriptionArray.map((item, index) => (
-                <li key={index} className="text-sm">
-                  {item}
-                </li>
-              ))
-            : descriptionArray.slice(0, 2).map((item, index) => (
-                <li key={index} className="text-sm">
-                  {item}
-                </li>
-              ))}
-        </ul>
+      {/* Summary - always visible, no bullet point */}
+      {summary && <p className="font-bold text-gray-700 text-sm mb-4">{summary}</p>}
 
-        {/* Tools & Technologies - visible in both states but with transition */}
-        <div
-          className={cn(
-            "mb-4 transition-all duration-300",
-            isExpanded ? "opacity-100" : "opacity-0 h-0 overflow-hidden",
-          )}
-        >
-          <h4 className="text-sm font-medium text-morandi-blue-dark mb-2">Tools & Technologies</h4>
-          <div className="flex flex-wrap gap-2">
-            {tools.map((tool, index) => (
-              <span
-                key={index}
-                className="text-xs bg-morandi-neutral-light text-morandi-blue-dark px-3 py-1 rounded-full"
-              >
-                {tool}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Key Outcome - visible in both states but with transition */}
-        <div
-          className={cn("transition-all duration-300", isExpanded ? "opacity-100" : "opacity-0 h-0 overflow-hidden")}
-        >
-          <h4 className="text-sm font-medium text-morandi-blue-dark mb-1">Key Outcome</h4>
-          <p className="text-sm text-gray-600">{outcome}</p>
+      {/* Tools & Technologies - always visible */}
+      <div className="mb-4">
+        <h4 className="text-sm font-medium text-morandi-blue-dark mb-2">Tools & Technologies</h4>
+        <div className="flex flex-wrap gap-2">
+          {tools.map((tool, index) => (
+            <span
+              key={index}
+              className="text-xs bg-morandi-neutral-light text-morandi-blue-dark px-3 py-1 rounded-full"
+            >
+              {tool}
+            </span>
+          ))}
         </div>
       </div>
 
-      {/* Show indicator that there's more content when collapsed */}
-      {!isExpanded && descriptionArray.length > 2 && (
-        <div className="text-xs text-gray-400 mt-2">
-          Hover to see {descriptionArray.length - 2} more point{descriptionArray.length - 2 !== 1 ? "s" : ""}...
+      {/* Key Outcome - always visible */}
+      <div className="mb-4">
+        <h4 className="text-sm font-medium text-morandi-blue-dark mb-1">Key Outcome</h4>
+        <p className="text-sm text-gray-600">{outcome}</p>
+      </div>
+
+      {/* Rest of description points - visible only when expanded */}
+      {isExpanded && restOfDescription.length > 0 && (
+        <div className="transition-all duration-300 opacity-100">
+          <ul className="list-disc pl-5 text-gray-600 space-y-2">
+            {restOfDescription.map((item, index) => (
+              <li key={index} className="text-sm">
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
+      )}
+
+      {/* Indicator that there's more content when collapsed */}
+      {!isExpanded && restOfDescription.length > 0 && (
+        <div className="text-xs text-gray-400 mt-2">Hover to see more details...</div>
       )}
     </div>
   )
