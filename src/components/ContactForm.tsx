@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { useToast } from "@/hooks/use-toast"
 import { Loader2, CheckCircle, AlertCircle } from "lucide-react"
@@ -87,18 +86,28 @@ const ContactForm = () => {
     setIsSubmitting(true)
 
     try {
-      // In a real implementation, you would send the form data to a backend service
-      // For example:
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData)
-      // });
+      // Send the form data to the EmailJS service
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          service_id: "service_4l9mk7r", // Replace with the service ID from step 1
+          template_id: "template_g2bah67", // This appears to be your template ID from the image
+          user_id: "9hwg6TwlPdL-LXkdW", // Get this from EmailJS Account settings
+          template_params: {
+            title: formData.subject,
+            name: formData.name,
+            message: formData.message,
+            email: formData.email, // This will be the sender's email for reply-to
+          },
+        }),
+      })
 
-      // if (!response.ok) throw new Error('Failed to send message');
-
-      // Simulate a successful submission for now
-      await new Promise((resolve) => setTimeout(resolve, 1500))
+      if (!response.ok) {
+        throw new Error("Failed to send message")
+      }
 
       // Show success message
       toast({
