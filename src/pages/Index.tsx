@@ -159,9 +159,9 @@ const Index = () => {
       
       {/* Skills Section */}
       <SectionContainer id="skills" className="bg-white">
-        <h2 className="section-title" data-animate>Skills & Expertise</h2>
+        <h2 className="section-title" data-animate>Skills</h2>  {/* Changed from Skills & Expertise to Skills */}
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">  {/* Changed from 3 columns to 2 */}
           <div className="bg-morandi-neutral-lightest p-6 rounded-lg shadow-sm" data-animate>
             <h3 className="section-subtitle">Programming & Tools</h3>
             <ul className="list-disc pl-5 space-y-1 text-gray-600">
@@ -181,23 +181,12 @@ const Index = () => {
               <li>English (fluent)</li>
             </ul>
           </div>
-          
-          <div className="bg-morandi-neutral-lightest p-6 rounded-lg shadow-sm" data-animate>
-            <h3 className="section-subtitle">Expertise</h3>
-            <ul className="list-disc pl-5 space-y-1 text-gray-600">
-              <li>Accounting</li>
-              <li>Auditing</li>
-              <li>Business Analytics</li>
-              <li>Data Visualization</li>
-              <li>Financial Analysis</li>
-            </ul>
-          </div>
         </div>
       </SectionContainer>
       
       {/* Services Section */}
       <SectionContainer id="services" className="bg-morandi-neutral-lightest">
-        <h2 className="section-title" data-animate>Services</h2>
+        <h2 className="section-title" data-animate>Expertise</h2>  {/* Changed from Services to Expertise */}
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <ServiceCard 
